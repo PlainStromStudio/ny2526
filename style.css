@@ -2,7 +2,7 @@
   font-family: "Cherry Bomb One", system-ui;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
   overflow: hidden;
@@ -182,12 +182,12 @@ body {
     font-size: 0;
   }
   45% {
-    right: 120px;
-    font-size: 4rem;
+    right: clamp(100px, 13vw, 120px);
+    font-size: clamp(1.5rem, 3vw, 4rem);
   }
   100%{
-    right: 120px;
-    font-size: 4rem;
+    right: clamp(100px, 13vw, 120px);;
+    font-size: clamp(1.5rem, 3vw, 4rem);
   }
 }
 
@@ -201,12 +201,12 @@ body {
     font-size: 0;
   }
   45% {
-    left: 120px;
-    font-size: 4rem;
+    left: clamp(80px, 10vw, 120px);;
+    font-size: clamp(1.5rem, 3vw, 4rem);
   }
   100%{
-    left: 120px;
-    font-size: 4rem;
+    left: clamp(80px, 10vw, 120px);;
+    font-size: clamp(1.5rem, 3vw, 4rem);
   }
 }
 
@@ -220,13 +220,11 @@ body {
     font-size: 0;
   }
   45% {
-    top: 45%;
-    font-size: 4rem;
+    top: 8vh;
+    font-size: clamp(1.5rem, 3vw, 4rem);
   }
   100%{
-    top: 45%;
-    font-size: 4rem;
+    top: 8vh;
+    font-size: clamp(1.5rem, 3vw, 4rem);
   }
-
 }
-
