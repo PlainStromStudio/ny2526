@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy New Year</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+  </head>
+  <body>
+    <audio id="bgMusic" loop>
+      <source
+        src="assets/music/Star Wars_ Imperial March x Carol of The Bells EPIC VERSION (Epic Christmas Music).mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+    <audio id="boomSound" src="assets/music/Loud Fireworks (Bass Boosted).mp3" preload="auto"></audio>
+    <audio id="whistle" src="assets/music/Fireworks Whistle Sound Effect.mp3" preload="auto"></audio>
+    <audio id="sparkle" src="assets/music/Firework sparkle sound effect.mp3" preload="auto"></audio>
+    <div class="cont">
+      <div class="sun"></div>
+      <div class="moon-cont">
+        <h1 id="left" class="text message">
+            Happy
+        </h1>
+        <h1 id="right" class="text message" style="text-align: right;">
+            New Year
+        </h1>
+        <h1 id="bottom" class="text message" style="text-align: left;">
+            2026
+        </h1>
+        <div class="moon"></div>
+      </div>
+      <div
+        id="fw-cont"
+        style="width: 100%; height: 100%; display: block; overflow: hidden"
+      ></div>
+      <div class="ground"></div>
+      <div class="over">
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+          "
+        >
+          <h2 id="text2" style="font-size: 2rem; background-color: rgba(0, 0, 0, 0.274); padding: 5px; font-weight: 100; border-radius: 5px;" class="text">Tap Anywhere ~Jesson</h2>
+          <h2 id="text3" style="font-size: 1rem; background-color: rgba(0, 0, 0, 0.274); padding: 5px; font-weight: 100; border-radius: 5px; margin-top: 10%;" class="text">There's Fireworks!</h2>
+        </div>
+      </div>
+    </div>
+    <div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

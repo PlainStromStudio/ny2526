@@ -1,0 +1,230 @@
+* {
+  font-family: "Cherry Bomb One", system-ui;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-image: url("assets/img/bg.jpg");
+  background-size: cover;
+}
+
+.cont {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 225, 54);
+}
+
+.cont.animated {
+  animation: setColor 10s ease-in-out 0s 1 forwards;
+}
+
+.sun {
+  background: yellow;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  top: 1vh;
+  box-shadow: 0 0 60px 30px yellow, 0 0 100px 60px rgb(253, 223, 55),
+    0 0 140px 90px rgb(255, 251, 194);
+}
+
+.sun.animated {
+  animation: sunset 5s ease-in 0s 1 forwards;
+}
+
+.moon {
+  background: rgb(20, 51, 87);
+  width: 100px;
+  height: 100px;
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.moon-cont {
+  position: absolute;
+  top: 100vh;
+  display: none;
+}
+
+.moon-cont.animated {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: moonrise-cont 3s ease-out 5s 1 forwards;
+}
+
+.moon.animated {
+  display: block;
+  animation: moonrise 3s ease-out 5s 1 forwards;
+}
+
+.ground {
+  width: 100%;
+  height: 500px;
+  background-image: url("assets/img/parallaxcitybuildings.png");
+  position: absolute;
+  background-size: cover;
+  display: block;
+  bottom: 0;
+}
+
+.ground.animated {
+  animation: darkness 3s ease-out 5s 1 forwards;
+}
+
+@keyframes sunset {
+  0% {
+    top: 0;
+    box-shadow: 0 0 60px 30px yellow, 0 0 100px 60px rgb(253, 223, 55),
+      0 0 140px 90px rgb(255, 251, 194);
+  }
+  100% {
+    top: 100vh;
+    box-shadow: none;
+  }
+}
+
+@keyframes moonrise {
+  0% {
+    box-shadow: none;
+  }
+  100% {
+    box-shadow: 0 0 40px 10px rgb(20, 51, 87), 0 0 60px 30px rgb(44, 74, 109),
+      0 0 80px 40px rgb(109, 148, 192);
+  }
+}
+
+@keyframes moonrise-cont {
+  0% {
+    top: 100vh;
+  }
+  100% {
+    top: 10vh;
+  }
+}
+
+@keyframes setColor {
+  0% {
+    background: rgb(255, 225, 54);
+  }
+  30% {
+    background: rgb(255, 115, 0);
+  }
+  50% {
+    background: rgba(0, 44, 70, 0.856);
+  }
+  100% {
+    background: rgba(0, 3, 26, 0.568);
+  }
+}
+
+@keyframes darkness {
+  0% {
+    brightness: 100%;
+  }
+  45% {
+    brightness: 50%;
+  }
+}
+
+.fw-trail {
+  --velx: 3;
+  --vely: 10;
+  width: 5px;
+  height: 5px;
+  bottom: 0;
+  position: absolute;
+  box-shadow: 0 0 10px white;
+}
+
+.fw-fire {
+  --velx: 0;
+  --vely: 0;
+  --life: 100;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+}
+
+.over {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  color: #fff;
+  text-align: center;
+  font-size: 0;
+  display: block;
+  position: absolute;
+  width: max-content;
+}
+
+#left.animated{
+    animation: leftAnim 3s ease-out 8s 1 forwards;
+}
+
+@keyframes leftAnim {
+  0% {
+    right: 0;
+    font-size: 0;
+  }
+  45% {
+    right: 120px;
+    font-size: 4rem;
+  }
+  100%{
+    right: 120px;
+    font-size: 4rem;
+  }
+}
+
+#right.animated{
+    animation: rightAnim 3s ease-out 9s 1 forwards;
+}
+
+@keyframes rightAnim {
+  0% {
+    left: 0;
+    font-size: 0;
+  }
+  45% {
+    left: 120px;
+    font-size: 4rem;
+  }
+  100%{
+    left: 120px;
+    font-size: 4rem;
+  }
+}
+
+#bottom.animated{
+    animation: bottomAnim 3s ease-out 10s 1 forwards;
+}
+
+@keyframes bottomAnim {
+  0% {
+    top: 0;
+    font-size: 0;
+  }
+  45% {
+    top: 45%;
+    font-size: 4rem;
+  }
+  100%{
+    top: 45%;
+    font-size: 4rem;
+  }
+}
