@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: url("assets/img/bg.jpg");
+  background-image: url("bg.jpg");
   background-size: cover;
 }
 
@@ -227,4 +227,5 @@ body {
     top: 45%;
     font-size: 4rem;
   }
+
 }
